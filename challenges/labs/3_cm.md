@@ -25,3 +25,18 @@ mysql> SHOW GRANTS for 'oozie'@'ip-172-31-6-157.us-west-2.compute.internal';
 | GRANT ALL PRIVILEGES ON `oozie`.* TO 'oozie'@'ip-172-31-6-157.us-west-2.compute.internal'                                                     |
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
 2 rows in set (0.00 sec)
+
+Command and output for hdfs dfs -ls /user
+[root@ip-172-31-6-157 cloudera-scm-server]# hadoop fs -ls /user
+Found 7 items
+drwxr-xr-x   - hdfs   supergroup          0 2016-09-23 12:06 /user/christie
+drwxr-xr-x   - hdfs   supergroup          0 2016-09-23 12:01 /user/hdfs
+drwxrwxrwx   - mapred hadoop              0 2016-09-23 11:53 /user/history
+drwxrwxr-t   - hive   hive                0 2016-09-23 11:54 /user/hive
+drwxrwxr-x   - hue    hue                 0 2016-09-23 11:55 /user/hue
+drwxrwxr-x   - oozie  oozie               0 2016-09-23 11:55 /user/oozie
+drwxr-xr-x   - hdfs   supergroup          0 2016-09-23 12:07 /user/weiner
+
+Command and output for hadoop classpath
+[root@ip-172-31-6-157 cloudera-scm-server]# hadoop classpath
+/etc/hadoop/conf:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop/lib/*:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop/.//*:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop-hdfs/./:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop-hdfs/lib/*:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop-hdfs/.//*:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop-yarn/lib/*:/opt/cloudera/parcels/CDH-5.7.3-1.cdh5.7.3.p0.5/lib/hadoop/libexec/../../hadoop-yarn/.//*:/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/lib/*:/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/.//*
